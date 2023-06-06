@@ -75,7 +75,16 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {
+    if(a.charCodeAt(0) > b.charCodeAt(0)) {
+      return 1;
+    } else if (a.charCodeAt(0) < b.charCodeAt(0)) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,7 +101,8 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => a.price > b.price ? 1 : -1);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,7 +114,8 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => a.localeCompare(b));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -114,7 +125,8 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => a.length > b.length ? 1 : a.length < b.length ? -1 : 0);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,7 +138,8 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => `${a}`.length > `${b}`.length ? 1 : `${a}`.length < `${b}`.length ? -1 : 0);
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -148,7 +161,8 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => a.lastName.localeCompare(b.lastName));
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,7 +176,28 @@ If two people have the same full name, the younger one should come first. Do not
 ------------------------------------------------------------------------------------------------ */
 
 const sortPeopleBetter = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {
+    if (a.lastName > b.lastName) {
+      return 1;
+    } else if (a.lastName < b.lastName) {
+      return -1;
+    } else {
+      if(a.firstName > b.firstName) {
+        return 1;
+      } else if (a.firstName < b.firstName) {
+        return -1;
+      } else {
+        if (a.age > b.age) {
+          return 1;
+        } else if (a.age < b.age) {
+          return -1;
+        } else {
+          return 0;
+        }
+      }
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -188,7 +223,17 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    if (days.indexOf(a.dayOfWeek) > days.indexOf(b.dayOfWeek)) {
+      return 1;
+    } else if (days.indexOf(a.dayOfWeek) < days.indexOf(b.dayOfWeek)) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -202,7 +247,36 @@ You DO NOT need to use your solution to Challenge 12 in completing Challenge 13.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    if (days.indexOf(a.dayOfWeek) > days.indexOf(b.dayOfWeek)) {
+      return 1;
+    } else if (days.indexOf(a.dayOfWeek) < days.indexOf(b.dayOfWeek)) {
+      return -1;
+    } else {
+      const startTimeA = new Date();
+      startTimeA.setHours(`${a.start[0]}`.concat(a.start[1]));
+      startTimeA.setMinutes(`${a.start[2]}`.concat(a.start[3]));
+      const endTimeA = new Date();
+      endTimeA.setHours(`${a.end[0]}`.concat(a.end[1]));
+      endTimeA.setMinutes(`${a.end[2]}`.concat(a.end[3]));
+
+      const startTimeB = new Date();
+      startTimeB.setHours(`${b.start[0]}`.concat(b.start[1]));
+      startTimeB.setMinutes(`${b.start[2]}`.concat(b.start[3]));
+      const endTimeB = new Date();
+      endTimeB.setHours(`${b.end[0]}`.concat(b.end[1]));
+      endTimeB.setMinutes(`${b.end[2]}`.concat(b.end[3]));
+      if((endTimeA - startTimeA) > (endTimeB - startTimeB)) {
+        return 1;
+      } else if ((endTimeA - startTimeA) < (endTimeB - startTimeB)) {
+        return -1;
+      } else {
+        return 0;
+      }
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------

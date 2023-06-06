@@ -1,4 +1,4 @@
-# Table of contentes
+# Table of contents
 
 |Links|
 -----
