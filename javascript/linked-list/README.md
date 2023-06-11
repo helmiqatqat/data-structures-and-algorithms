@@ -57,7 +57,9 @@ module.exports = Linkedlist;
 ## Linked-list-test.js Code
 
 ```code
-const Linkedlist = require('./Linked-list');
+'use strict';
+
+const Linkedlist = require('../index');
 
 describe('test linked list', () => {
   test('creates a linkedlist', () => {
