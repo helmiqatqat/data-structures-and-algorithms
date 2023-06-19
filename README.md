@@ -1,6 +1,6 @@
 |Table of Contents|
 |------------------|
-|[Linked-list-insertions](./javascript/linked-list-insertions/README.md)|
+|[Linked-list-insertions](./javascript/code-challenges/linked-list-insertions/README.md)|
 |[Mock-interview](./javascript//code-challenges/mock-interview/README.md)
 |[Array Binary Search](./javascript/code-challenges/array-binary-search/README.md)|
 |[Linked-list](./javascript/linked-list/README.md)|
