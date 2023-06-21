@@ -1,5 +1,7 @@
 'use strict';
+
 const Linkedlist = require('../index');
+
 describe('test linked list', () => {
   const ll = new Linkedlist();
   ll.append(1);
