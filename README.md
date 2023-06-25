@@ -1,5 +1,6 @@
 |Table of Contents|
 |------------------|
+|[Linked-list-zip](./javascript/code-challenges/linked-list-zip/README.md)|
 |[Linked-list-kth](./javascript/code-challenges/linked-list-kth/README.md)|
 |[Linked-list-insertions](./javascript/code-challenges/linked-list-insertions/README.md)|
 |[Mock-interview](./javascript//code-challenges/mock-interview/README.md)
