@@ -3,6 +3,6 @@
 |Table of Contents|
 |-----------------|
 |[Whiteboard](./images//AnimalShelter.png)|
-|[Library](./md/Stack.md)|
+|[Library](./lib/Lib.md)|
 |[Animal-Shelter-Code](./AnimalShelter.js)
-|[Tests](./md/Queue.md)|
+|[Tests](./__tests__/AnimalShelter.test.js)|
