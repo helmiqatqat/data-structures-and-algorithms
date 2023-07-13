@@ -19,9 +19,9 @@ describe('PseudoQueue', () => {
     pseudoQueue.stack1 = [5, 10, 15, 20];
 
     expect(pseudoQueue.dequeue()).toBe(5);
-    expect(pseudoQueue.stack2).toEqual([10, 15, 20]);
+    expect(pseudoQueue.stack2).toEqual([20, 15, 10]);
 
     expect(pseudoQueue.dequeue()).toBe(10);
-    expect(pseudoQueue.stack2).toEqual([15, 20]);
+    expect(pseudoQueue.stack2).toEqual([20, 15]);
   });
 });
