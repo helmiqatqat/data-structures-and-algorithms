@@ -2,4 +2,4 @@
 |-----------------|
 |[White Board](./Whiteboard.png)|
 |[Function](./validateBrackets.js)|
-|[Tests](./__tests__/README.md)
+|[Tests](./__tests__/validateBrackets.test.js)
