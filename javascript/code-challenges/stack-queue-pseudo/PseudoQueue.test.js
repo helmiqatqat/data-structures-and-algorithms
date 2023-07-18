@@ -2,7 +2,7 @@ const PseudoQueue = require('./PseudoQueue'); // Assuming PseudoQueue class is i
 
 describe('PseudoQueue', () => {
   let pseudoQueue;
-  
+
   beforeEach(() => {
     pseudoQueue = new PseudoQueue();
   });
