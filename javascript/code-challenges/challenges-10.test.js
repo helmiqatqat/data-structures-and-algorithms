@@ -29,7 +29,7 @@ const findMax = (matrix) => {
   const array_1D = matrix.map(row => {
     return row.reduce((acc, curr) => {
       return acc >= curr ? acc : curr;
-    }, 0)
+    }, 0);
   });
   return Math.max(...array_1D);
 };
