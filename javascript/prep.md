@@ -15,4 +15,4 @@
 |[Method Chaining](./code-challenges/challenges-11.test.js)|
 |[Regular Expressions 2](./code-challenges/challenges-12.test.js)|
 |[.includes(), .every(), .charAt()](./code-challenges/challenges-13.test.js)|
-|[Combination of Everything)](./code-challenges/challenges-14.test.js)|
+|[Combination of Everything](./code-challenges/challenges-15.test.js)|
