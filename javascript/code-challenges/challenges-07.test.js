@@ -25,8 +25,8 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-    return starWarsArr.sort((a,b) => b.height - a.height)
-  };
+  return starWarsArr.sort((a,b) => b.height - a.height);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,14 +35,14 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-    if(idx + 3 > arr.length) {
-      arr.splice(idx)
-    }
-    else {
-      arr.splice(idx, 3)
-    }
-    return arr
-  };
+  if(idx + 3 > arr.length) {
+    arr.splice(idx);
+  }
+  else {
+    arr.splice(idx, 3);
+  }
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -51,7 +51,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-    return arr.join(" ")
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,14 +68,14 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-    let result = [];
-    let newArr = str.split("")
-    for(let i = 0; i <= str.length; i++) {
-      result.push(newArr.join(""))
-      newArr.splice(0, 1)
-    }
-    return result;
-  };
+  let result = [];
+  let newArr = str.split('');
+  for(let i = 0; i <= str.length; i++) {
+    result.push(newArr.join(''));
+    newArr.splice(0, 1);
+  }
+  return result;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -86,7 +86,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  return arr.split("")
+  return arr.split('');
 };
 
 
@@ -132,14 +132,14 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-    let result = [];
-    for(let i of recipe.ingredients) {
-      let firstCut = i.slice(i.indexOf(" ") + 1)
-      let secondCut = firstCut.slice(firstCut.indexOf(" ") + 1 )
-      result.push(secondCut)
-    }
-    return result;
-  };
+  let result = [];
+  for(let i of recipe.ingredients) {
+    let firstCut = i.slice(i.indexOf(' ') + 1);
+    let secondCut = firstCut.slice(firstCut.indexOf(' ') + 1 );
+    result.push(secondCut);
+  }
+  return result;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -150,12 +150,12 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-    return recipe.ingredients.map(e => {
-        const array = e.split(" ")
-        array.splice(0, 2)
-        return array.join(" ")
-    });
-  };
+  return recipe.ingredients.map(e => {
+    const array = e.split(' ');
+    array.splice(0, 2);
+    return array.join(' ');
+  });
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -168,7 +168,7 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 ------------------------------------------------------------------------------------------------ */
 
 const stepActions = (recipe) => {
-    return recipe.steps.map(e => e.split(" ").at(0))
+  return recipe.steps.map(e => e.split(' ').at(0));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -185,13 +185,13 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] % 2 === 0) {
-        arr.splice(i, 1)
-        i--;
-      }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      arr.splice(i, 1);
+      i--;
     }
-  };
+  }
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -209,14 +209,14 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-    if(numberOfCharacters > str.length) {
-      return ''
-    } else if (numberOfCharacters < 0) {
-      return str
-    } else {
-      return str.split("").slice(0, -numberOfCharacters).join("")
-    }
-  };
+  if(numberOfCharacters > str.length) {
+    return '';
+  } else if (numberOfCharacters < 0) {
+    return str;
+  } else {
+    return str.split('').slice(0, -numberOfCharacters).join('');
+  }
+};
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -226,12 +226,12 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 ------------------------------------------------------------------------------------------------ */
 
 const totalSumCSV = (str) => {
-    let total = 0;
-    for(let i of str.split(",")) {
-      total += parseInt(i)
-    }
-    return total;
-  };
+  let total = 0;
+  for(let i of str.split(',')) {
+    total += parseInt(i);
+  }
+  return total;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 12 - Stretch Goal
@@ -242,9 +242,9 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-    const vowels = ['a','e','o','u','i']
-    return str.split("").filter(e => !vowels.includes(e)).join("")
-  };
+  const vowels = ['a','e','o','u','i'];
+  return str.split('').filter(e => !vowels.includes(e)).join('');
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 13 - Stretch Goal
@@ -257,9 +257,9 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = (str) => {
-    const noVowels = str.split("").filter(e => !['a','e','o','u','i'].includes(e)).join("")
-    const vowels = str.split("").filter(e => !noVowels.includes(e)).join("")
-    return [noVowels, vowels]
+  const noVowels = str.split('').filter(e => !['a','e','o','u','i'].includes(e)).join('');
+  const vowels = str.split('').filter(e => !noVowels.includes(e)).join('');
+  return [noVowels, vowels];
 };
 
 /* ------------------------------------------------------------------------------------------------

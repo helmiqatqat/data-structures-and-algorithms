@@ -55,26 +55,26 @@ let characters = [
 const sortByChildren = (charArray) => {
   return charArray.sort((a, b) => {
     if(a.children.length > b.children.length) {
-      return 1
+      return 1;
     } else if (a.children.length < b.children.length) {
-      return -1
+      return -1;
     } else {
-      if(a.name > b.name) return 1
-      else if (a.name < b.name) return -1
-      else return 0
+      if(a.name > b.name) return 1;
+      else if (a.name < b.name) return -1;
+      else return 0;
     }
-  })
+  });
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  const Re = new RegExp('w','g')
-  return Re.test(str)
+  const Re = new RegExp('w','g');
+  return Re.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -90,8 +90,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  let Re = /[0-9]/g
-  return Re.test(input)
+  let Re = /[0-9]/g;
+  return Re.test(input);
 };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -101,8 +101,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  const Re = /\bworld\b/g
-  return Re.test(input)
+  const Re = /\bworld\b/g;
+  return Re.test(input);
 };
 
 
@@ -115,8 +115,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let Re = /[A-Z]\w+/g
-  return str.match(Re) || []
+  let Re = /[A-Z]\w+/g;
+  return str.match(Re) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,8 +126,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  const Re = /^[A-J]/
-  return arr.filter(e => Re.test(e))
+  const Re = /^[A-J]/;
+  return arr.filter(e => Re.test(e));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,8 +143,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  const Re = /^([Oo]ct(ober)?)$/
-  return Re.test(input)
+  const Re = /^([Oo]ct(ober)?)$/;
+  return Re.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,8 +158,8 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  const Re = /\w+(?!,)\s/ig
-  return str.match(Re)
+  const Re = /\w+(?!,)\s/ig;
+  return str.match(Re);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -175,8 +175,8 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  let Re = /[aeiou]/ig
-  return str.replace(Re,'_')
+  let Re = /[aeiou]/ig;
+  return str.replace(Re,'_');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -192,8 +192,8 @@ Hint: All of these words end with the letters "ells".
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  let Re = /\w+(ells)\b/g
-  return str.match(Re)
+  let Re = /\w+(ells)\b/g;
+  return str.match(Re);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -250,7 +250,7 @@ describe('Testing challenge 4', () => {
   test('It should return false if the input does not contain the word "world"', () => {
     expect(containsWorld('hello everyone')).toBe(false);
   });
-})
+});
 
 describe('Testing challenge 5', () => {
   test('It should only return words that begin with a capital letter', () => {

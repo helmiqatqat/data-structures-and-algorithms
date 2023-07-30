@@ -12,7 +12,7 @@ Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
-  return people.map(e => e.firstName + ' ' + e.lastName)
+  return people.map(e => e.firstName + ' ' + e.lastName);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,9 +24,9 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   const sum = arr.reduce( (acc, val) => {
-   return acc + val
-  }, 0)
-  return sum
+    return acc + val;
+  }, 0);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,9 +43,9 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   const totalPrice = arr.reduce( (total, item) => {
-    return total + item.purchasePrice
-  }, 0)
-  return totalPrice
+    return total + item.purchasePrice;
+  }, 0);
+  return totalPrice;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,11 +57,11 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  const elementsNumber = arr.reduce( (sum, ele) => {
+  const elementsNumber = arr.reduce( (sum) => {
     sum++;
-    return sum
-  }, 0)
-  return elementsNumber
+    return sum;
+  }, 0);
+  return elementsNumber;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,10 +122,10 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   const characterNames = arr.reduce( (characters, element) => {
-      characters.push(element.name)
-      return characters
-    }, [])
-  return characterNames
+    characters.push(element.name);
+    return characters;
+  }, []);
+  return characterNames;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,11 +137,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  const lettersArray = str.split("")
+  const lettersArray = str.split('');
   const reversedString = lettersArray.reduce( (string, letter) => {
-     return letter + string
-  }, '')
-  return reversedString
+    return letter + string;
+  }, '');
+  return reversedString;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -195,9 +195,9 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   const childrenCount = arr.reduce( (count, current) => {
-    return current.children ? count + current.children.length : count
-  }, 0)
-  return childrenCount
+    return current.children ? count + current.children.length : count;
+  }, 0);
+  return childrenCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -210,11 +210,11 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   const averageObject = arr.reduce( (acc, val) => {
-    acc.count++
-    acc.sum = acc.sum + val
-    return acc
-  }, { count: 0, sum: 0 })
-  return averageObject.sum / averageObject.count
+    acc.count++;
+    acc.sum = acc.sum + val;
+    return acc;
+  }, { count: 0, sum: 0 });
+  return averageObject.sum / averageObject.count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -236,10 +236,10 @@ const isPrime = (value) => {
 
 const countPrimeNumbers = (arr) => {
   const primeCount = arr.reduce( (count, value) => {
-    if(isPrime(value)) { count++ }
-    return count
-  }, 0)
-  return primeCount
+    if(isPrime(value)) { count++; }
+    return count;
+  }, 0);
+  return primeCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -282,10 +282,10 @@ const snorlaxData = {
 
 const extractStats = (snorlaxData) => {
   const statsObject = snorlaxData.stats.reduce( ( statObj, element) => {
-    statObj[element.stat.name] = element.baseStat 
-    return statObj
-  }, {})
-  return statsObject
+    statObj[element.stat.name] = element.baseStat;
+    return statObj;
+  }, {});
+  return statsObject;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -299,14 +299,14 @@ Write a function named extractChildren that, given the array of characters from 
 ------------------------------------------------------------------------------------------------ */
 
 const extractChildren = (arr) => {
-  const filteredArray = arr.filter(e => e.name.includes('A') || e.name.includes('a'))
+  const filteredArray = arr.filter(e => e.name.includes('A') || e.name.includes('a'));
   const childrensArray = filteredArray.reduce( (children, character) => {
     if(character.children) {
-      children.push(...character.children)
+      children.push(...character.children);
     }
-    return children
-  }, [])
-  return childrensArray
+    return children;
+  }, []);
+  return childrensArray;
 };
 /* ------------------------------------------------------------------------------------------------
 TESTS
