@@ -13,3 +13,6 @@
 |[Object Iteration](./code-challenges/challenges-09.test.js)|
 |[Two-Dimensional Arrays](./code-challenges/challenges-10.test.js)|
 |[Method Chaining](./code-challenges/challenges-11.test.js)|
+|[Regular Expressions 2](./code-challenges/challenges-12.test.js)|
+|[.includes(), .every(), .charAt()](./code-challenges/challenges-13.test.js)|
+|[Combination of Everything)](./code-challenges/challenges-14.test.js)|
