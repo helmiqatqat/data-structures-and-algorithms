@@ -1,4 +1,4 @@
-const mergeSort = require ('./Merge Sort');
+const mergeSort = require ('./merge-sort');
 
 describe('merge sort test',()=>{
   test('test [20,18,12,8,5,-2]',()=>{

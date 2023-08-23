@@ -1,4 +1,4 @@
-const insertionSort = require ('./insertion-Sort');
+const insertionSort = require ('./insertion-sort');
 
 describe('insertion sort test',()=>{
   test('test [20,18,12,8,5,-2]',()=>{

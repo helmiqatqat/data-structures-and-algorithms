@@ -42,4 +42,4 @@ function merge(left, right, arr) {
   }
   return arr;
 }
-module.exports=mergesort;
+module.exports = mergesort;
