@@ -12,7 +12,7 @@ class Linkedlist {
   constructor() {
     this.head = null;
   }
-  insert(val) {
+  append(val) {
     if(this.head === null) {
       this.head = new Node(val);
     } else {
