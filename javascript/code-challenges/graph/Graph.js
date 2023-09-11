@@ -32,15 +32,23 @@ class Graph {
   size() {
     return this.adjList.size;
   }
+  breadthFirst(startNode) {
+    let queue = [startNode];
+    let result = [];
+    while(queue.length) {
+      const node = queue.pop();
+      if(!result.includes(node)) {
+        result.push(node);
+      }
+      const neighbors = this.getNeighbors(node);
+      for(let i = 0; i < neighbors.length; i++) {
+        if(!result.includes(neighbors[i])) {
+          queue.unshift(neighbors[i]);
+        }
+      }
+    }
+    return result;
+  }
 }
-
-const g = new Graph();
-g.addVertex(1);
-g.addVertex(2);
-g.addEdge(1,2);
-console.log(g.adjList.get(1));
-// console.log(g.getVertices());
-// console.log(g.getNeighbors(1));
-console.log(g.size());
 
 module.exports = Graph;
