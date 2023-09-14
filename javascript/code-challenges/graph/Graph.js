@@ -49,6 +49,23 @@ class Graph {
     }
     return result;
   }
+  depthFirst(startNode) {
+    let collection = [];
+    const traverse = (node) => {
+      if(!collection.includes(node)) {
+        collection.push(node);
+      }
+      const neighbors = this.getNeighbors(node);
+      for(let i = 0; i < neighbors.length; i++) {
+        if(!collection.includes(neighbors[i])) {
+          traverse(neighbors[i]);
+        }
+      }
+      if(collection.length === this.size()) return;
+    };
+    traverse(startNode);
+    return collection;
+  }
 }
 
 module.exports = Graph;
